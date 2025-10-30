@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { PlayerContext } from "../context/PlayerContext"
-
+// eslint-disable-next-line react/prop-types
 const SongItem = ({name,image,desc,id}) => {
 
   const {playWithId} = useContext(PlayerContext)
