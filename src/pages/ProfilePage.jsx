@@ -6,7 +6,7 @@ import Footer from "../components/ProfilePage/Footer";
 
 const ProfilePage = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen bg-[#121212] text-white flex flex-col">
       <Header />
 
       <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-10 space-y-6">
@@ -23,7 +23,7 @@ const ProfilePage = () => {
 
         <Section
           title="Thanh toán"
-          items={["Lịch sử đặt hàng", "Thẻ thanh toán đã lưu", "Đổi"]}
+          items={["Lịch sử đặt hàng", "Thẻ thanh toán đã lưu", "Đổi quà tặng"]}
         />
 
         <Section

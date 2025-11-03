@@ -1,10 +1,8 @@
-import Login from "./pages/Login";
-import ProfilePage from "./pages/ProfilePage";
-
+import Register from "./pages/Register";
 const App = () => {
   return (
     <>
-      <ProfilePage></ProfilePage>
+      <Register></Register>
     </>
   );
 };
