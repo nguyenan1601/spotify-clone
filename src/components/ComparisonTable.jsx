@@ -78,7 +78,7 @@ const ComparisonTable = () => {
               </div>
             )}
             <div className="grid grid-cols-3 py-6 items-center text-xl hover:bg-[#1E1E1E] transition">
-              <div className="text-gray-100 underline underline-offset-2 decoration-gray-500">
+              <div className="text-gray-100 decoration-gray-500">
                 {feature.name}
               </div>
               <div className="text-center text-gray-400 text-lg">—</div>

@@ -6,6 +6,7 @@ import { albumsData } from "../assets/assets";
 import DisplayPodcast from "./DisplayPodcast";
 import Premium from "./Premium";
 
+
 const Display = () => {
   const displayRef = useRef();
   const location = useLocation();
