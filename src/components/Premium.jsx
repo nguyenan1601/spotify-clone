@@ -1,8 +1,10 @@
 import { FaCcVisa, FaCcMastercard, FaCcAmex } from "react-icons/fa";
 import ComparisonTable from "./ComparisonTable";
 import PremiumPlans from "./PremiumPlans";
+import { useNavigate } from "react-router-dom";
 
 const Premium = () => {
+  const navigate = useNavigate();
   const methods = [
     { id: 1, icon: <FaCcVisa className="text-[#A50064]" />, name: "Momo" },
     { id: 2, icon: <FaCcVisa className="text-[#1A1F71]" />, name: "Visa" },
@@ -23,7 +25,10 @@ const Premium = () => {
           Only ₫65,000/month after. Cancel anytime.
         </p>
         <div className="flex gap-3">
-          <button className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:scale-110 transition">
+          <button
+            className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:scale-110 transition"
+            onClick={() => navigate("/checkout")}
+          >
             Try 2 months for ₫65,000
           </button>
           <button className="px-6 py-3 text-purple-50 border border-white font-semibold rounded-full hover:scale-110 transition">

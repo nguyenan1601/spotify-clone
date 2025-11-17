@@ -1,4 +1,5 @@
 import { FaSpotify } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const plans = [
   {
@@ -29,6 +30,7 @@ const plans = [
 ];
 
 const PremiumPlans = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#121212] text-white flex flex-col px-6">
       <div className="max-w-6xl w-[360px] ">
@@ -71,7 +73,17 @@ const PremiumPlans = () => {
               </ul>
 
               <button
-                className={` text-black font-bold py-3 rounded-full hover:brightness-110 transition-all mt-4`}
+                type="button"
+                onClick={() =>
+                  navigate(
+                    plan.id === 1
+                      ? "/checkout"
+                      : plan.id === 2
+                      ? "/verifystudent"
+                      : "/"
+                  )
+                }
+                className="text-black font-bold py-3 rounded-full hover:brightness-110 transition-all mt-4"
                 style={{ backgroundColor: plan.color }}
               >
                 Try 2 months for {plan.price.split(" ")[0]}

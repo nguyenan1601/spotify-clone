@@ -1,9 +1,8 @@
 import React from "react";
-import { use } from "react";
 import { useNavigate } from "react-router-dom";
-import Display from "../components/Display.jsx";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#121212] text-white">
       <div className="flex flex-col items-center w-full max-w-sm px-6">
@@ -34,9 +33,10 @@ const Login = () => {
 
         {/* Continue button */}
         <button
-            className="w-full bg-[#1DB954] text-black font-semibold py-3 rounded-full hover:scale-105 transition"
+          className="w-full bg-[#1DB954] text-black font-semibold py-3 rounded-full hover:scale-105 transition"
+          onClick={() => navigate("/")}
         >
-            Continue
+          Continue
         </button>
 
         {/* Divider */}
@@ -72,12 +72,12 @@ const Login = () => {
         <div className="mt-8 w-full text-center text-gray-400 text-sm">
           <p className="mb-4">
             Don’t have an account?{" "}
-            <a
-              href="#"
+            <button
+              onClick={() => navigate("/register")}
               className="text-white hover:underline font-medium hover:text-[#1DB954] transition"
             >
               Sign up for Spotify
-            </a>
+            </button>
           </p>
 
           <p className="text-xs text-gray-500 leading-relaxed">

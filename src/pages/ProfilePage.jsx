@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/ProfilePage/Header";
 import ProfileCard from "../components/ProfilePage/ProfileCard";
 import Section from "../components/ProfilePage/Section";
-import Footer from "../components/ProfilePage/Footer";
+import Footer from "../components/Footer";
 
 const ProfilePage = () => {
   return (

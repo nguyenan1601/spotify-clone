@@ -1,6 +1,7 @@
 import { FaGoogle, FaApple } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 export default function Register() {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#121212] min-h-screen flex flex-col items-center justify-center text-white">
       {/* Logo */}
@@ -35,7 +36,10 @@ export default function Register() {
           </p>
         </div>
 
-        <button className="w-full bg-[#1DB954] hover:bg-[#1ed760] text-black font-semibold py-3 rounded-full transition">
+        <button
+          className="w-full bg-[#1DB954] hover:bg-[#1ed760] text-black font-semibold py-3 rounded-full transition"
+          onClick={() => navigate("/login")}
+        >
           Next
         </button>
 
@@ -58,7 +62,7 @@ export default function Register() {
 
         <div className="text-center mt-4 text-sm text-gray-400">
           Already have an account?{" "}
-          <a href="#" className="text-white font-semibold hover:underline">
+          <a href="login" className="text-white font-semibold hover:underline">
             Log in
           </a>
         </div>
